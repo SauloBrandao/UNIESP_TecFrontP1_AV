@@ -259,8 +259,8 @@ body { /* Estabelece o padrão do body do site, definindo fonte, margem padrão 
   background: linear-gradient(135deg, #EDF1FF, #FCFCFA);
   border: 1px solid #E5E5E1;
   border-radius: 6px;
-  overflow: hidden;      /* novo: corta o que passar das bordas arredondadas */
-  display: flex;         /* novo: centraliza a imagem */
+  overflow: hidden;      
+  display: flex;         
   align-items: center;
   justify-content: center;
 }
@@ -268,12 +268,12 @@ body { /* Estabelece o padrão do body do site, definindo fonte, margem padrão 
 .projeto-visual img {
   width: 100%;
   height: 100%;
-  object-fit: contain;   /* mostra a imagem inteira, sem cortar */
+  object-fit: contain;   
 }
 
 .projeto-linha {
   display: grid;
-  grid-template-columns: 1fr 1.2fr; /* ajuste a proporção como preferir */
+  grid-template-columns: 1fr 1.2fr; 
   gap: 40px;
 }
 
