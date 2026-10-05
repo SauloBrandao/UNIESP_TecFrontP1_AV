@@ -1,0 +1,340 @@
+* { box-sizing: border-box; } /* Faz com que o padding dos elementos fiquem dentro da largura definida*/
+
+html {
+  scroll-behavior: smooth; /* Faz com que a rolagem seja da página seja suave ao clicar em link */
+}
+
+body { /* Estabelece o padrão do body do site, definindo fonte, margem padrão do navegador, aponta uma fonte reserva (Sans Serif) */
+  margin: 0;
+  background: #FCFCFA;
+  color: #16171A;
+  font-family: 'Space Grotesk', sans-serif;
+  line-height: 1.5;
+}
+
+/* ---------- Ajustadores de Layout ---------- */
+.cabecalho-site, main, .rodape-site {
+  position: relative;
+  z-index: 1;
+}
+
+.rotulo-secao {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 13px;
+  color: #6B6E76;
+  margin-bottom: 24px;
+}
+
+/* ---------- Header ---------- */
+.cabecalho-site {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 28px 96px;
+}
+
+.logo {
+  font-family: 'JetBrains Mono', monospace;
+  font-weight: 500;
+  color: #16171A;
+  text-decoration: none;
+  font-size: 18px;
+}
+
+.cabecalho-site nav {
+  display: flex;
+  gap: 28px;
+}
+
+.cabecalho-site nav a {
+  color: #4A4C52;
+  text-decoration: none;
+  font-size: 14px;
+  font-family: 'JetBrains Mono', monospace;
+  transition: color 0.15s ease;
+}
+
+.cabecalho-site nav a:hover,
+.cabecalho-site nav a:focus-visible {
+  color: #2451FF;
+}
+
+@media (max-width: 560px) {
+  .cabecalho-site { flex-direction: column; gap: 16px; align-items: flex-start; }
+}
+
+/* ---------- Apresentação ---------- */
+.apresentacao {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 96px 96px 80px;
+}
+
+.apresentacao-sobretitulo {
+  font-family: 'JetBrains Mono', monospace;
+  color: #6B6E76;
+  font-size: 14px;
+  margin: 0 0 12px;
+}
+
+.apresentacao h1 {
+  font-size: clamp(2.6rem, 6vw, 3.6rem);
+  margin: 0 0 8px;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+
+.apresentacao-cargo {
+  font-size: 1.15rem;
+  color: #4A4C52;
+  margin: 0 0 20px;
+  min-height: 1.6em;
+}
+
+.maquina-de-escrever { color: #2451FF; font-weight: 500; }
+
+.cursor {
+  color: #2451FF;
+  animation: piscar 1s step-end infinite;
+}
+
+@keyframes piscar { 50% { opacity: 0; } }
+
+.apresentacao-descricao {
+  max-width: 52ch;
+  color: #4A4C52;
+  font-size: 1rem;
+  margin: 0 0 36px;
+}
+
+.apresentacao-links {
+  display: flex;
+  gap: 16px;
+}
+
+.botao-primario, .botao-secundario {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 14px;
+  padding: 12px 22px;
+  border-radius: 4px;
+  text-decoration: none;
+  transition: transform 0.15s ease, background 0.15s ease;
+}
+
+.botao-primario {
+  background: #2451FF;
+  color: #fff;
+}
+
+.botao-primario:hover { background: #1a3ecc; }
+
+.botao-secundario {
+  border: 1px solid #E5E5E1;
+  color: #16171A;
+}
+
+.botao-secundario:hover { border-color: #2451FF; color: #2451FF; }
+
+/* ---------- Padronizando espaço entre Seções ---------- */
+.sobre-mim, .tecnologias, .projetos, .contato {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 64px 96px;
+  border-top: 1px solid #E5E5E1;
+}
+
+/* ---------- Descrição ---------- */
+.sobre-texto {
+  font-size: 1.05rem;
+  color: #4A4C52;
+  max-width: 58ch;
+}
+
+.sobre-texto strong { color: #16171A; font-weight: 600; }
+
+/* ---------- Tecnologias ---------- */
+.grade-tecnologias {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 32px;
+}
+
+.grupo-tecnologias h3 {
+  font-size: 14px;
+  font-family: 'JetBrains Mono', monospace;
+  color: #6B6E76;
+  margin: 0 0 12px;
+  font-weight: 500;
+}
+
+.grupo-tecnologias ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.grupo-tecnologias li {
+  padding: 6px 0;
+  border-bottom: 1px solid #E5E5E1;
+  font-size: 15px;
+}
+
+@media (max-width: 560px) {
+  .grade-tecnologias { grid-template-columns: 1fr; gap: 28px; }
+}
+
+/* ---------- Projetos ---------- */
+.projeto--destaque {
+  display: grid;
+  grid-template-columns: 1.3fr 1fr;
+  gap: 40px;
+  align-items: center;
+  padding-bottom: 48px;
+  margin-bottom: 48px;
+  border-bottom: 1px solid #E5E5E1;
+}
+
+.projeto-etiqueta {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 12px;
+  color: #2451FF;
+  background: #EDF1FF;
+  padding: 4px 10px;
+  border-radius: 4px;
+  display: inline-block;
+  margin-bottom: 14px;
+}
+
+.projeto h3 {
+  font-size: 1.4rem;
+  margin: 0 0 12px;
+}
+
+.projeto p {
+  color: #4A4C52;
+  font-size: 0.98rem;
+  margin: 0 0 16px;
+}
+
+.projeto-detalhes {
+  list-style: none;
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  padding: 0;
+  margin: 0 0 18px;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 12px;
+  color: #6B6E76;
+}
+
+.projeto-detalhes li {
+  border: 1px solid #E5E5E1;
+  padding: 3px 9px;
+  border-radius: 4px;
+}
+
+.projeto-links {
+  display: flex;
+  gap: 18px;
+}
+
+.projeto-links a {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 13px;
+  color: #16171A;
+  text-decoration: none;
+  border-bottom: 1px solid #16171A;
+  padding-bottom: 1px;
+  transition: color 0.15s ease, border-color 0.15s ease;
+}
+
+.projeto-links a:hover {
+  color: #2451FF;
+  border-color: #2451FF;
+}
+
+.projeto-visual {
+  aspect-ratio: 4 / 3;
+  background: linear-gradient(135deg, #EDF1FF, #FCFCFA);
+  border: 1px solid #E5E5E1;
+  border-radius: 6px;
+  overflow: hidden;      /* novo: corta o que passar das bordas arredondadas */
+  display: flex;         /* novo: centraliza a imagem */
+  align-items: center;
+  justify-content: center;
+}
+
+.projeto-visual img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;   /* mostra a imagem inteira, sem cortar */
+}
+
+.projeto-linha {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr; /* ajuste a proporção como preferir */
+  gap: 40px;
+}
+
+@media (max-width: 720px) {
+  .projeto--destaque { grid-template-columns: 1fr; }
+  .projeto-visual { order: -1; }
+  .projeto-linha { grid-template-columns: 1fr; gap: 48px; }
+}
+
+/* ---------- Contato ---------- */
+.contato h2 {
+  font-size: 1.8rem;
+  margin: 0 0 12px;
+}
+
+.contato p {
+  color: #4A4C52;
+  margin: 0 0 28px;
+}
+
+.contato-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 15px;
+}
+
+.contato-links a {
+  color: #16171A;
+  text-decoration: none;
+  border-bottom: 1px solid #E5E5E1;
+  padding-bottom: 2px;
+  transition: color 0.15s ease, border-color 0.15s ease;
+}
+
+.contato-links a:hover {
+  color: #2451FF;
+  border-color: #2451FF;
+}
+
+/* ---------- Footer ---------- */
+.rodape-site {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 32px 96px 64px;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 13px;
+  color: #6B6E76;
+}
+
+/* ---------- Focus states ---------- */
+a:focus-visible, button:focus-visible {
+  outline: 2px solid #2451FF;
+  outline-offset: 2px;
+}
+
+/* ---------- Margens laterais menores no celular ---------- */
+@media (max-width: 720px) {
+  .cabecalho-site { padding: 28px 24px; }
+  .apresentacao { padding: 96px 24px 80px; }
+  .sobre-mim, .tecnologias, .projetos, .contato { padding: 64px 24px; }
+  .rodape-site { padding: 32px 24px 64px; }
+}

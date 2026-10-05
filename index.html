@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Saulo Pinto — Desenvolvedor Full-Stack</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/styles/style.css">
+<script src="/scripts/script.js" defer></script>
+</head>
+<body>
+<header class="cabecalho-site">
+  <a href="#topo" class="logo">Saulo Pinto</a>
+  <nav>
+    <a href="#sobre">sobre</a>
+    <a href="#tecnologias">tecnologias</a>
+    <a href="#projetos">projetos</a>
+    <a href="#contato">contato</a>
+  </nav>
+</header>
+
+<main id="topo">
+  <section class="apresentacao">
+    <h1>Saulo Pinto</h1>
+    <p class="apresentacao-cargo">
+      Desenvolvedor(a) Full-Stack focado em
+      <span class="maquina-de-escrever" id="maquina-de-escrever"></span><span class="cursor">|</span>
+    </p>
+    <p class="apresentacao-descricao">
+      Formado na área de tecnologia, em Sistemas para Internet, com foco em desenvolvimento contínuo, dados e inteligência artificial. 
+      Atualmente curso Ciência da Computação como segunda graduação, atuando também como representante de turma. 
+      Natural de João Pessoa, Paraíba, Brasil. Apaixonado por tecnologia, inovação e aprendizado constante.
+    </p>
+    <div class="apresentacao-links">
+      <a href="#projetos" class="botao-primario">Ver projetos</a>
+      <a href="#contato" class="botao-secundario">Falar comigo</a>
+    </div>
+  </section>
+
+  <section id="sobre" class="sobre-mim">
+    <div class="rotulo-secao">Resumo Profissional</div>
+    <p class="sobre-texto">
+      Desenvolvedor Full-Stack formado em Sistemas para Internet pela UNIESP, atualmente cursando Ciência da Computação na mesma instituição. 
+      Tenho experiência prática construindo aplicações do zero — de APIs REST autenticadas em Java e Spring Boot a interfaces em React. 
+      Trabalhei também com automação de processos usando Python, PyAutoGUI e Pandas em ambiente de produção, otimizando fluxos manuais em sistemas como o TOTVS. 
+      Gosto de projetos que unem lógica sólida no back-end com uma boa experiência de uso, e sigo aprofundando meu interesse na construção de APIs robustas e escaláveis.
+    </p>
+  </section>
+
+  <section id="tecnologias" class="tecnologias">
+    <div class="rotulo-secao">Conhecimentos / Stacks</div>
+    <div class="grade-tecnologias">
+      <div class="grupo-tecnologias">
+        <h3>Frontend</h3>
+        <ul>
+          <li>HTML</li>
+          <li>CSS</li>
+          <li>React</li>
+          <li>JavaScript</li>
+        </ul>
+      </div>
+      <div class="grupo-tecnologias">
+        <h3>Backend</h3>
+        <ul>
+          <li>Java</li>
+          <li>Python</li>
+          <li>Spring Boot</li>
+        </ul>
+      </div>
+      <div class="grupo-tecnologias">
+        <h3>Ferramentas</h3>
+        <ul>
+          <li>Git</li>
+          <li>GitHub CLI</li> 
+          <li>Docker</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section id="projetos" class="projetos">
+    <div class="rotulo-secao">Projetos</div>
+
+    <article class="projeto projeto--destaque">
+      <div class="projeto-info">
+        <span class="projeto-etiqueta">projeto em destaque</span>
+        <h3>Custom Media Downloader</h3>
+        <p>
+          Um projeto feito com o intuito de ajudar a mim e outros colegas que mestram RPG. 
+          O Custom Media Downloader é uma aplicação que permite baixar arquivos em formato 
+          MP3 e MP4 de forma rápida e organizada, sem depender de páginas externas infestadas de adware.
+        </p>
+        <ul class="projeto-detalhes">
+          <li>Python</li>
+          <li>Tkinter</li>
+          <li>YT-DLP e FFMPEG</li>
+        </ul>
+        <div class="projeto-links">
+          <a href="https://github.com/SauloBrandao/PS_ProjetoMediaDownloader" target="_blank" rel="noopener">Ver projeto ↗</a>
+          <a href="https://github.com/SauloBrandao/PS_ProjetoMediaDownloader/blob/master/Interface/interface.py" target="_blank" rel="noopener">Código ↗</a>
+        </div>
+      </div>
+      <div class="projeto-visual" aria-hidden="true"><img src="images/frontimg.png" alt="Visual do projeto"></div>
+    </article>
+
+    <div class="projeto-linha">
+      <article class="projeto projeto--pequeno">
+        <span class="projeto-etiqueta">projeto</span>
+        <h3>API Aluno Online</h3>
+        <p>Uma API Spring feita para gerenciar informações de alunos em um ambiente de ensino.</p>
+        <ul class="projeto-detalhes">
+          <li>Spring Boot</li>
+          <li>PostgreSQL</li>
+          <li>REST</li>
+        </ul>
+        <div class="projeto-links">
+          <a href="https://github.com/SauloBrandao/UNIESP_PROJETO_AlunoOnline" target="_blank" rel="noopener">Ver projeto ↗</a>
+          <a href="https://github.com/SauloBrandao/UNIESP_PROJETO_AlunoOnline/tree/main/aluno_online/api/src/main/java/br/com/alunoonline/api" target="_blank" rel="noopener">Código ↗</a>
+        </div>
+      </article>
+
+      <article class="projeto projeto--pequeno">
+        <span class="projeto-etiqueta">projeto</span>
+        <h3>Projeto RAG  </h3>
+        <p>Um RAG feito utilizando LANGCHAIN e OpeanAi API</p>
+        <ul class="projeto-detalhes">
+          <li>Python</li>
+          <li>Langchain</li>
+          <li>Openai</li>
+        </ul>
+        <div class="projeto-links">
+          <a href="https://github.com/SauloBrandao/PS_PROJETO_RAG" target="_blank" rel="noopener">Ver projeto ↗</a>
+          <a href="https://github.com/SauloBrandao/PS_PROJETO_RAG/blob/main/main.py" target="_blank" rel="noopener">Código ↗</a>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <section id="contato" class="contato">
+    <div class="rotulo-secao">Contato</div>
+    <h2>Vamos conversar?</h2>
+    <p>Aberto a novas oportunidades e projetos. É só chamar.</p>
+    <div class="contato-links">
+      <a href="mailto:saulopintobrandaofilho@gmail.com">saulopintobrandaofilho@gmail.com</a>
+      <a href="https://github.com/SauloBrandao" target="_blank" rel="noopener">GitHub</a>
+      <a href="https://www.linkedin.com/in/saulo-pinto/" target="_blank" rel="noopener">LinkedIn</a>
+    </div>
+  </section>
+
+</main>
+
+<footer class="rodape-site">
+  <p>Saulo Pinto, <span id="ano"></span></p>
+</footer>
+</body>
+</html>
